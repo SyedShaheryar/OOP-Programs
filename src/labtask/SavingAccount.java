@@ -15,7 +15,7 @@ public class SavingAccount extends BankAccount{
 		if (Balance < 25)
 			{
 			System.out.println("Account is InActive");
-			//return false;
+		
 			}
 			
 			return true;
@@ -27,7 +27,7 @@ public class SavingAccount extends BankAccount{
 	{	
 		
 		
-		if(Balance > 25)
+		if(StatusField())
 		{
 			Balance = Balance + AmountOfDeposit;
 			NumOfDeposits++;
@@ -43,7 +43,7 @@ public class SavingAccount extends BankAccount{
 
 	public void WithDraw(double AmountOfWithdraw)
 	{
-		if(Balance > 25) //check it here
+		if(StatusField())
 		{
 		Balance = Balance - AmountOfWithdraw;
 		NumOfWithdrawls++;
@@ -69,7 +69,6 @@ public class SavingAccount extends BankAccount{
 		
 		if(NumOfWithdrawls > 4 && Balance > 25)
 		{
-			CalcInterest(); //useless??
 			Balance = Balance - (NumOfWithdrawls - 4);
 			NumOfDeposits = 0;
 			NumOfWithdrawls = 0;
