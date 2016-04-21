@@ -12,8 +12,6 @@ public abstract class BankAccount {
 	public BankAccount (double b, double AIR, double MSC)
 	{
 		Balance = b;
-//		NumOfDeposits = numD;
-//		NumOfWithdrawls = numW;
 		AnnualInterestRate = AIR;
 		MonthlyServiceCharges = MSC;
 		
@@ -73,6 +71,7 @@ public abstract class BankAccount {
 	public double getMSC()
 	{
 		return MonthlyServiceCharges;
+		
 	}
 	
 
